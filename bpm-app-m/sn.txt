@@ -1,0 +1,2 @@
+手动安装：
+npm install mint-ui -S  aa

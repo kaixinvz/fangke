@@ -1,0 +1,16 @@
+.vux-header {
+  background-color: #31abff !important;
+}
+.vux-header .vux-header-left a{
+  color: #fff !important
+}
+.vux-header .vux-header-left{
+  color: #fff !important
+}
+.vux-header .vux-header-right a{
+  color: #fff !important;
+}
+.vux-header .vux-header-left .left-arrow:before{
+  border: 1px solid #fff !important;
+  border-width: 1px 0 0 1px !important;
+}

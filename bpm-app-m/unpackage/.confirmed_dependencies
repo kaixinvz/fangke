@@ -1,0 +1,37 @@
+{
+	"dist/index.html": {
+		"resources": [
+			"dist/static/mui.js",
+			"dist/static/app.js",
+			"dist/static/js/vendor.4e2dfd3357dcfe90c6a3.js",
+			"dist/static/css/app.907a00e92dc6055c2cd7de18d0c0558a.css",
+			"dist/static/js/app.f47888f2e5448bf4f247.js",
+			"dist/static/js/manifest.3ad1d5771e9b13dbdad2.js",
+			"dist/static/js/app.2c626bd3d40772e3172a.js",
+			"dist/static/css/app.a257c7a9af23f668f3d8f210b6333f76.css",
+			"dist/static/js/manifest.37a2ecbb1d1b7e6c9ada.js",
+			"dist/static/js/vendor.a680c24be7316c468c7f.js",
+			"dist/static/js/app.5e5cb269e6b386bd18f0.js",
+			"dist/static/css/app.c3d824e2811db6df79c25debdee54c9d.css",
+			"dist/static/js/app.c2f18d8b965e7e54daf1.js",
+			"dist/static/js/manifest.ad41d78d2e74352e8fd9.js",
+			"dist/static/js/vendor.fd8072db3d0368b5af68.js",
+			"dist/static/css/app.d9f820aa4045726452df6410097bc033.css",
+			"dist/static/js/app.4056a9ccdaf4e042d1d8.js",
+			"dist/static/js/manifest.eced50f66253609a9db8.js",
+			"dist/static/js/manifest.35bf2f530a69ba9a55be.js",
+			"dist/static/js/app.8e6c815c5b42bea588b9.js",
+			"dist/static/js/app.8da28c0fc8489a9d0332.js",
+			"dist/static/js/manifest.893d85f0ad0fd8d9a9eb.js",
+			"dist/static/js/manifest.54c710ee95f5eacd95db.js",
+			"dist/static/js/app.ba08d207759593517484.js",
+			"dist/static/js/manifest.4c47854955d92571879a.js",
+			"dist/static/js/app.df458abbbfc9877db356.js",
+			"dist/static/js/vendor.a25bd4ab80573edd1304.js",
+			"dist/static/js/manifest.726fa91ea774adf97262.js",
+			"dist/static/js/manifest.0fb8e4ade8d94966a397.js",
+			"dist/static/js/app.931d9f767bbe7104fc8f.js"
+		],
+		"refer": []
+	}
+}

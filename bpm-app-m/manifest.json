@@ -1,0 +1,549 @@
+{
+    "@platforms" : [ "android", "iPhone", "iPad" ],
+    "id" : "H501B8ACC", /*应用的标识，创建应用时自动生成，勿手动修改*/
+    "name" : "永青云平台", /*应用名称，程序桌面图标名称*/
+    "version" : {
+        "name" : "1.0", /*应用版本名称*/
+        "code" : ""
+    },
+    "description" : "", /*应用描述信息*/
+    "icons" : {
+        "72" : "icon.png"
+    },
+    "launch_path" : "/dist/index.html", /*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "fullscreen" : true,
+    "developer" : {
+        "name" : "", /*开发者名称*/
+        "email" : "", /*开发者邮箱地址*/
+        "url" : "" /*开发者个人主页地址*/
+    },
+    "permissions" : {
+        "Messaging" : {
+            "description" : "短彩邮件插件"
+        },
+        "Cache" : {
+            "description" : "管理应用缓存"
+        },
+        "Console" : {
+            "description" : "跟踪调试输出日志"
+        },
+        "Contacts" : {
+            "description" : "访问系统联系人信息"
+        },
+        "Events" : {
+            "description" : "应用扩展事件"
+        },
+        "Maps" : {
+            "description" : "管理地图插件"
+        },
+        "Speech" : {
+            "description" : "管理语音识别插件"
+        },
+        "Push" : {}
+    },
+    "plus" : {
+        "splashscreen" : {
+            "autoclose" : true, /*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+            "waiting" : true /*是否在程序启动界面显示等待雪花，true表示显示，false表示不显示。*/
+        },
+        "popGesture" : "close", /*设置应用默认侧滑返回关闭Webview窗口，"none"为无侧滑返回功能，"hide"为侧滑隐藏Webview窗口。参考http://ask.dcloud.net.cn/article/102*/
+        "runmode" : "normal", /*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+        "signature" : "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==", /*可选，保留给应用签名，暂不使用*/
+        "distribute" : {
+            "apple" : {
+                "appid" : "", /*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+                "mobileprovision" : "", /*iOS应用打包配置文件*/
+                "password" : "", /*iOS应用打包个人证书导入密码*/
+                "p12" : "", /*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+                "devices" : "universal", /*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+                "frameworks" : [] /*调用Native.js调用原生Objective-c API需要引用的FrameWork，如需调用GameCenter，则添加"GameKit.framework"*/
+            },
+            "google" : {
+                "packagename" : "", /*Android应用包名，如io.dcloud.HelloH5*/
+                "keystore" : "", /*Android应用打包使用的密���库文件*/
+                "password" : "", /*Android应用打包使用密钥库中证书的密码*/
+                "aliasname" : "", /*Android应用打包使用密钥库中证书的别名*/
+                "permissions" : [
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.SYSTEM_ALERT_WINDOW\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                ]
+            },
+            /*使用Native.js调用原生安卓API需要使用到的系统权限*/
+            "orientation" : [ "portrait-primary" ], /*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+            "icons" : {
+                "ios" : {
+                    "prerendered" : true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+
+                    /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+                    "iphone" : {
+                        "normal" : "", /*iPhone3/3GS程序图标，分辨率：57x57*/
+                        "retina" : "", /*iPhone4程序图标，分辨率：114x114*/
+
+                        /*iPhone4S/5/6程序图标，分辨率：120x120*//*iPhone6 Plus程序图标，分辨率：180x180*/
+                        "spotlight-normal" : "", /*iPhone3/3GS Spotlight搜索程序图标，分辨率：29x29*/
+                        "spotlight-retina" : "", /*iPhone4 Spotlight搜索程序图标，分辨率：58x58*/
+
+                        /*iPhone4S/5/6 Spotlight搜索程序图标，分辨率：80x80*/
+                        "settings-normal" : "", /*iPhone4设置页面程序图标，分辨率：29x29*/
+
+                        /*iPhone4S/5/6设置页面程序图标，分辨率：58x58*/
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png" /*iPhone6Plus设置页面程序图标，分辨率：87x87*/
+                    },
+                    "ipad" : {
+                        "normal" : "", /*iPad普通屏幕程序图标，分辨率：72x72*/
+                        "retina" : "", /*iPad高分屏程序图标，分辨率：144x144*/
+
+                        /*iPad iOS7程序图标，分辨率：76x76*//*iPad iOS7高分屏程序图标，分辨率：152x152*/
+                        "spotlight-normal" : "", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+                        "spotlight-retina" : "", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+
+                        /*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*//*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*//*iPad设置页面程序图标，分辨率：29x29*/
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png" /*iPad高分屏设置页面程序图标，分辨率：58x58*/
+                    },
+                    "appstore" : "static/img/qingshanImges.png"
+                },
+                "android" : {
+                    "mdpi" : "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
+                    "ldpi" : "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
+                    "hdpi" : "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
+                    "xhdpi" : "unpackage/res/icons/96x96.png", /*720P高分屏程序图标，分辨率：96x96*/
+                    "xxhdpi" : "unpackage/res/icons/144x144.png", /*1080P 高分屏程序图标，分辨率：144x144*/
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
+                }
+            },
+            "splashscreen" : {
+                "ios" : {
+                    "iphone" : {
+                        "default" : "", /*iPhone3启动图片选，分辨率：320x480*/
+                        "retina35" : "", /*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+                        "retina40" : "", /*4.0 英寸设备(iPhone5/iPhone5s)启动图片，分辨率：640x1136*/
+                        "retina47" : "", /*4.7 英寸设备(iPhone6)启动图片，分辨率：750x1334*/
+                        "retina55" : "", /*5.5 英寸设备(iPhone6 Plus)启动图片，分辨率：1242x2208*/
+                        "retina55l" : "" /*5.5 英寸设备(iPhone6 Plus)横屏启动图片，分辨率：2208x1242*/
+                    },
+                    "ipad" : {
+                        "portrait" : "", /*iPad竖屏启动图片，分辨率：768x1004*/
+                        "portrait-retina" : "", /*iPad高分屏竖屏图片，分辨率：1536x2008*/
+                        "landscape" : "", /*iPad横屏启动图片，分辨率：1024x748*/
+                        "landscape-retina" : "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+                        "portrait7" : "", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+                        "portrait-retina7" : "", /*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+                        "landscape7" : "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+                        "landscape-retina7" : "" /*iPad iOS7高分屏横屏启动图片，分辨率：2048x1536*/
+                    }
+                },
+                "android" : {
+                    "mdpi" : "", /*普通屏启动图片，分辨率：240x282*/
+                    "ldpi" : "", /*大屏启动图片，分辨率：320x442*/
+                    "hdpi" : "static/img/480_762.png", /*高分屏启动图片，分辨率：480x762*/
+                    "xhdpi" : "static/img/720_1242.png", /*720P高分屏启动图片，分辨率：720x1242*/
+                    "xxhdpi" : "static/img/1080_1882.png" /*1080P高分屏启动图片，分辨率：1080x1882*/
+                }
+            },
+            "plugins" : {
+                "push" : {
+                    "igexin" : {
+                        "appid" : "nVK0DHZYQK6kLJpQSb5o38",
+                        "appkey" : "7j4p0Bw4n76VPxC16xauU6",
+                        "appsecret" : "wLQuSl6BRS7TItY5YiSts7"
+                    }
+                },
+                "speech" : {
+                    "ifly" : {}
+                }
+            }
+        }
+    },
+    "dependencies" : {
+		"pages": {
+			"dist/index.html": {
+				"resources": [
+					"dist/static/mui.js",
+					"dist/static/app.js",
+					"dist/static/js/vendor.4e2dfd3357dcfe90c6a3.js",
+					"dist/static/css/app.907a00e92dc6055c2cd7de18d0c0558a.css",
+					"dist/static/js/app.f47888f2e5448bf4f247.js",
+					"dist/static/js/manifest.3ad1d5771e9b13dbdad2.js",
+					"dist/static/js/app.2c626bd3d40772e3172a.js",
+					"dist/static/css/app.a257c7a9af23f668f3d8f210b6333f76.css",
+					"dist/static/js/manifest.37a2ecbb1d1b7e6c9ada.js",
+					"dist/static/js/vendor.a680c24be7316c468c7f.js",
+					"dist/static/js/app.5e5cb269e6b386bd18f0.js",
+					"dist/static/css/app.c3d824e2811db6df79c25debdee54c9d.css",
+					"dist/static/js/app.c2f18d8b965e7e54daf1.js",
+					"dist/static/js/manifest.ad41d78d2e74352e8fd9.js",
+					"dist/static/js/vendor.fd8072db3d0368b5af68.js",
+					"dist/static/css/app.d9f820aa4045726452df6410097bc033.css",
+					"dist/static/js/app.4056a9ccdaf4e042d1d8.js",
+					"dist/static/js/manifest.eced50f66253609a9db8.js",
+					"dist/static/js/manifest.35bf2f530a69ba9a55be.js",
+					"dist/static/js/app.8e6c815c5b42bea588b9.js",
+					"dist/static/js/app.8da28c0fc8489a9d0332.js",
+					"dist/static/js/manifest.893d85f0ad0fd8d9a9eb.js",
+					"dist/static/js/manifest.54c710ee95f5eacd95db.js",
+					"dist/static/js/app.ba08d207759593517484.js",
+					"dist/static/js/manifest.4c47854955d92571879a.js",
+					"dist/static/js/app.df458abbbfc9877db356.js",
+					"dist/static/js/vendor.a25bd4ab80573edd1304.js",
+					"dist/static/js/manifest.726fa91ea774adf97262.js",
+					"dist/static/js/manifest.0fb8e4ade8d94966a397.js",
+					"dist/static/js/app.931d9f767bbe7104fc8f.js"
+				],
+				"refer": [],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"src/assets/webuploader/webuploader.noimage.js",
+				"src/assets/css/font-awesome/fonts/fontawesome-webfont.eot",
+				"src/view/bpm/demo.html",
+				"src/assets/css/font-awesome/less/stacked.less",
+				"dist/static/fonts/fontawesome-webfont.b06871f.ttf",
+				"src/assets/css/glabol.css",
+				"src/components/user/userInfo.vue",
+				"src/components/bpm/instanceImageDialog.vue",
+				"src/assets/img/shenqing@2x.png",
+				"说明.txt",
+				"src/assets/css/font-awesome/scss/_larger.scss",
+				"dist/static/fonts/fontawesome-webfont.af7ae50.woff2",
+				"src/service/bpm/bpmService.js",
+				"package.json",
+				"src/assets/ztree/jquery.ztree.all.min.js",
+				"dist/static/css/app.f56d01968fd56707d301394b7c875ded.css.map",
+				"dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map",
+				"src/assets/webuploader/webuploader.withoutimage.js",
+				"config/dev.env.js",
+				"src/assets/css/font-awesome/scss/_bordered-pulled.scss",
+				"src/assets/css/font-awesome/scss/_list.scss",
+				"package-lock.json",
+				"README.md",
+				"src/assets/webuploader/webuploader.fis.js",
+				"src/assets/webuploader/webuploader.nolog.min.js",
+				"src/components/form/abDict.vue",
+				"src/assets/ztree/css/zTreeStyle.css",
+				"src/view/login.vue",
+				"src/assets/css/font-awesome/scss/_path.scss",
+				"src/assets/img/zhanghao@2x.png",
+				"src/assets/webuploader/webuploader.html5only.min.js",
+				"src/assets/css/font-awesome/less/bordered-pulled.less",
+				"dist/static/app_bak.js",
+				"build/webpack.dev.conf.js",
+				"index.html",
+				"src/assets/logo.png",
+				"src/assets/ztree/css/img/zTreeStandard.gif",
+				"src/assets/css/font-awesome/less/list.less",
+				"src/assets/css/font-awesome/less/animated.less",
+				"src/main.js",
+				"test/e2e/nightwatch.conf.js",
+				"src/assets/css/font-awesome/HELP-US-OUT.txt",
+				"src/assets/webuploader/Uploader.swf",
+				"src/view/bpm/draftList.vue",
+				"config/index.js",
+				"src/assets/ztree/css/img/loading.gif",
+				"src/view/bpm/applyList.vue",
+				"src/assets/ztree/css/img/zTreeStandard_old.png",
+				"src/assets/webuploader/README.md",
+				"sn.txt",
+				"src/assets/css/weui/weui.css",
+				"src/view/bpm/instanceDetail.vue",
+				"dist/static/js/vendor.4e2dfd3357dcfe90c6a3.js.map",
+				"src/components/form/abCustDialog.vue",
+				"src/assets/css/font-awesome/scss/_rotated-flipped.scss",
+				"src/assets/img/custom-official-b@2x.png",
+				"src/assets/webuploader/webuploader.min.js",
+				"src/view/bpm/definitionList.vue",
+				"test/e2e/custom-assertions/elementCount.js",
+				"src/assets/img/caogaoxiang@2x.png",
+				"dist/static/fonts/fontawesome-webfont.fee66e7.woff",
+				"src/assets/img/xuanzhong@2x.png",
+				"build/logo.png",
+				"src/assets/webuploader/webuploader.css",
+				"src/assets/img/daibanshixiang@2x.png",
+				"dist/static/js/manifest.2ae2e69a05c33dfc65f8.js",
+				"src/assets/css/font-awesome/less/variables.less",
+				"src/assets/css/font-awesome/scss/_variables.scss",
+				"src/App.vue",
+				"src/view/bpm/taskComplate.vue",
+				"config/prod.env.js",
+				"src/assets/css/font-awesome/scss/_animated.scss",
+				"build/webpack.base.conf.js",
+				"src/assets/css/font-awesome/less/icons.less",
+				"dist/static/js/app.f29b9ae76a98026be2d6.js.map",
+				"dist/static/img/f7c014380bc542d5c00e36eac59d601.c1cd6d5.jpg",
+				"src/components/form/abCustDialogShowList.vue",
+				"src/assets/img/lishidianjihou@2x.png",
+				"src/components/form/abScroller.vue",
+				"src/assets/ztree/css/img/left_menu.png",
+				"src/service/common/baseService.js",
+				"src/assets/css/font-awesome/scss/_icons.scss",
+				"src/assets/webuploader/webuploader.flashonly.min.js",
+				"LICENSE",
+				"src/components/form/abUpload.vue",
+				"src/assets/webuploader/webuploader.custom.js",
+				"dist/static/img/fontawesome-webfont.912ec66.svg",
+				"build/check-versions.js",
+				"src/assets/webuploader/webuploader.custom.min.js",
+				"src/assets/webuploader/webuploader.js",
+				"src/assets/css/font-awesome/scss/_mixins.scss",
+				"src/assets/css/font-awesome/scss/_fixed-width.scss",
+				"src/assets/css/font-awesome/scss/_core.scss",
+				"dist/static/js/app.f29b9ae76a98026be2d6.js",
+				"src/components/user/loginDialog.vue",
+				"dist/static/css/app.f56d01968fd56707d301394b7c875ded.css",
+				"src/service/form/formService.js",
+				"src/assets/css/font-awesome/less/core.less",
+				"src/assets/ztree/css/img/line_conn.gif",
+				"src/assets/css/font-awesome/less/path.less",
+				"src/assets/img/jichushijianfenlei@2x.png",
+				"src/service/common/tools.js",
+				"src/assets/css/font-awesome/less/mixins.less",
+				"src/service/form/formValidator.js",
+				"src/view/bpm/todoTaskList.vue",
+				"src/components/user/login.vue",
+				"static/app.js",
+				"src/assets/ztree/css/left_menuForOutLook.gif",
+				"src/assets/webuploader/webuploader.html5only.js",
+				"src/assets/ztree/css/left_menuForOutLook.png",
+				"src/assets/css/font-awesome/less/rotated-flipped.less",
+				"src/assets/css/font-awesome/scss/_screen-reader.scss",
+				"src/assets/css/font-awesome/scss/_stacked.scss",
+				"src/assets/img/custom-design@2x.png",
+				"dist/static/img/zTreeStandard.92717ba.png",
+				"config/test.env.js",
+				"src/assets/webuploader/webuploader.nolog.js",
+				"src/view/bpm/start.vue",
+				"src/assets/ztree/css/img/zTreeStandard.png",
+				"src/assets/css/font-awesome/less/larger.less",
+				"static/app_bak.js",
+				"src/assets/css/font-awesome/css/font-awesome.min.css",
+				"src/assets/webuploader/webuploader.flashonly.js",
+				"test/e2e/specs/test.js",
+				"dist/static/fonts/fontawesome-webfont.674f50d.eot",
+				"src/view/Home.vue",
+				"src/assets/css/font-awesome/less/fixed-width.less",
+				"src/view/test.vue",
+				"src/components/bpm/opinionDialog.vue",
+				"build/utils.js",
+				"src/assets/webuploader/webuploader.withoutimage.min.js",
+				"src/assets/css/font-awesome/fonts/fontawesome-webfont.woff",
+				"src/assets/css/font-awesome/fonts/FontAwesome.otf",
+				"src/assets/css/font-awesome/scss/font-awesome.scss",
+				"src/assets/css/font-awesome/less/screen-reader.less",
+				"src/router/index.js",
+				"src/assets/css/font-awesome/fonts/fontawesome-webfont.svg",
+				"build/dev-server.js",
+				"static/mui.js",
+				"src/assets/css/font-awesome/fonts/fontawesome-webfont.woff2",
+				"src/service/common/dynamicComponent.js",
+				"src/assets/img/mima@2x.png",
+				"src/assets/vux_logo.png",
+				"src/components/form/abCustDialogShowTree.vue",
+				"build/vue-loader.conf.js",
+				"test/e2e/runner.js",
+				"src/assets/css/font-awesome/less/font-awesome.less",
+				"src/view/bpm/approveList.vue",
+				"src/assets/ztree/css/outLook.css",
+				"build/build.js",
+				"src/assets/img/f7c014380bc542d5c00e36eac59d601.jpg",
+				"src/components/bpm/opinionHistoryDialog.vue",
+				"src/assets/css/font-awesome/css/font-awesome.css",
+				"src/assets/ztree/css/img/left_menuForOutLook.png",
+				"src/components/form/abCheckbox.vue",
+				"src/assets/ztree/jquery.min.js",
+				"src/assets/ztree/css/img/left_menu.gif",
+				"build/webpack.test.conf.js",
+				"src/assets/webuploader/webuploader.noimage.min.js",
+				"build/webpack.prod.conf.js",
+				"src/assets/css/font-awesome/fonts/fontawesome-webfont.ttf"
+			]
+		}
+	},
+    "unpackage" : [
+        "build/build.js",
+        "build/check-versions.js",
+        "build/dev-server.js",
+        "build/logo.png",
+        "build/utils.js",
+        "build/vue-loader.conf.js",
+        "build/webpack.base.conf.js",
+        "build/webpack.dev.conf.js",
+        "build/webpack.prod.conf.js",
+        "build/webpack.test.conf.js",
+        "config/dev.env.js",
+        "config/index.js",
+        "config/prod.env.js",
+        "config/test.env.js",
+        "src/App.vue",
+        "src/assets/css/font-awesome/HELP-US-OUT.txt",
+        "src/assets/css/font-awesome/css/font-awesome.css",
+        "src/assets/css/font-awesome/css/font-awesome.min.css",
+        "src/assets/css/font-awesome/fonts/FontAwesome.otf",
+        "src/assets/css/font-awesome/fonts/fontawesome-webfont.eot",
+        "src/assets/css/font-awesome/fonts/fontawesome-webfont.svg",
+        "src/assets/css/font-awesome/fonts/fontawesome-webfont.ttf",
+        "src/assets/css/font-awesome/fonts/fontawesome-webfont.woff",
+        "src/assets/css/font-awesome/fonts/fontawesome-webfont.woff2",
+        "src/assets/css/font-awesome/less/animated.less",
+        "src/assets/css/font-awesome/less/bordered-pulled.less",
+        "src/assets/css/font-awesome/less/core.less",
+        "src/assets/css/font-awesome/less/fixed-width.less",
+        "src/assets/css/font-awesome/less/font-awesome.less",
+        "src/assets/css/font-awesome/less/icons.less",
+        "src/assets/css/font-awesome/less/larger.less",
+        "src/assets/css/font-awesome/less/list.less",
+        "src/assets/css/font-awesome/less/mixins.less",
+        "src/assets/css/font-awesome/less/path.less",
+        "src/assets/css/font-awesome/less/rotated-flipped.less",
+        "src/assets/css/font-awesome/less/screen-reader.less",
+        "src/assets/css/font-awesome/less/stacked.less",
+        "src/assets/css/font-awesome/less/variables.less",
+        "src/assets/css/font-awesome/scss/_animated.scss",
+        "src/assets/css/font-awesome/scss/_bordered-pulled.scss",
+        "src/assets/css/font-awesome/scss/_core.scss",
+        "src/assets/css/font-awesome/scss/_fixed-width.scss",
+        "src/assets/css/font-awesome/scss/_icons.scss",
+        "src/assets/css/font-awesome/scss/_larger.scss",
+        "src/assets/css/font-awesome/scss/_list.scss",
+        "src/assets/css/font-awesome/scss/_mixins.scss",
+        "src/assets/css/font-awesome/scss/_path.scss",
+        "src/assets/css/font-awesome/scss/_rotated-flipped.scss",
+        "src/assets/css/font-awesome/scss/_screen-reader.scss",
+        "src/assets/css/font-awesome/scss/_stacked.scss",
+        "src/assets/css/font-awesome/scss/_variables.scss",
+        "src/assets/css/font-awesome/scss/font-awesome.scss",
+        "src/assets/css/glabol.css",
+        "src/assets/css/weui/weui.css",
+        "src/assets/img/caogaoxiang@2x.png",
+        "src/assets/img/custom-design@2x.png",
+        "src/assets/img/custom-official-b@2x.png",
+        "src/assets/img/daibanshixiang@2x.png",
+        "src/assets/img/f7c014380bc542d5c00e36eac59d601.jpg",
+        "src/assets/img/jichushijianfenlei@2x.png",
+        "src/assets/img/lishidianjihou@2x.png",
+        "src/assets/img/mima@2x.png",
+        "src/assets/img/shenqing@2x.png",
+        "src/assets/img/xuanzhong@2x.png",
+        "src/assets/img/zhanghao@2x.png",
+        "src/assets/logo.png",
+        "src/assets/vux_logo.png",
+        "src/assets/webuploader/README.md",
+        "src/assets/webuploader/Uploader.swf",
+        "src/assets/webuploader/webuploader.css",
+        "src/assets/webuploader/webuploader.custom.js",
+        "src/assets/webuploader/webuploader.custom.min.js",
+        "src/assets/webuploader/webuploader.fis.js",
+        "src/assets/webuploader/webuploader.flashonly.js",
+        "src/assets/webuploader/webuploader.flashonly.min.js",
+        "src/assets/webuploader/webuploader.html5only.js",
+        "src/assets/webuploader/webuploader.html5only.min.js",
+        "src/assets/webuploader/webuploader.js",
+        "src/assets/webuploader/webuploader.min.js",
+        "src/assets/webuploader/webuploader.noimage.js",
+        "src/assets/webuploader/webuploader.noimage.min.js",
+        "src/assets/webuploader/webuploader.nolog.js",
+        "src/assets/webuploader/webuploader.nolog.min.js",
+        "src/assets/webuploader/webuploader.withoutimage.js",
+        "src/assets/webuploader/webuploader.withoutimage.min.js",
+        "src/assets/ztree/css/img/left_menu.gif",
+        "src/assets/ztree/css/img/left_menu.png",
+        "src/assets/ztree/css/img/left_menuForOutLook.png",
+        "src/assets/ztree/css/img/line_conn.gif",
+        "src/assets/ztree/css/img/loading.gif",
+        "src/assets/ztree/css/img/zTreeStandard.gif",
+        "src/assets/ztree/css/img/zTreeStandard.png",
+        "src/assets/ztree/css/img/zTreeStandard_old.png",
+        "src/assets/ztree/css/left_menuForOutLook.gif",
+        "src/assets/ztree/css/left_menuForOutLook.png",
+        "src/assets/ztree/css/outLook.css",
+        "src/assets/ztree/css/zTreeStyle.css",
+        "src/assets/ztree/jquery.min.js",
+        "src/assets/ztree/jquery.ztree.all.min.js",
+        "src/components/bpm/instanceImageDialog.vue",
+        "src/components/bpm/opinionDialog.vue",
+        "src/components/bpm/opinionHistoryDialog.vue",
+        "src/components/form/abCheckbox.vue",
+        "src/components/form/abCustDialog.vue",
+        "src/components/form/abCustDialogShowList.vue",
+        "src/components/form/abCustDialogShowTree.vue",
+        "src/components/form/abDict.vue",
+        "src/components/form/abScroller.vue",
+        "src/components/form/abUpload.vue",
+        "src/components/user/login.vue",
+        "src/components/user/loginDialog.vue",
+        "src/components/user/userInfo.vue",
+        "src/main.js",
+        "src/router/index.js",
+        "src/service/bpm/bpmService.js",
+        "src/service/common/baseService.js",
+        "src/service/common/dynamicComponent.js",
+        "src/service/common/tools.js",
+        "src/service/form/formService.js",
+        "src/service/form/formValidator.js",
+        "src/view/Home.vue",
+        "src/view/bpm/applyList.vue",
+        "src/view/bpm/approveList.vue",
+        "src/view/bpm/definitionList.vue",
+        "src/view/bpm/demo.html",
+        "src/view/bpm/draftList.vue",
+        "src/view/bpm/instanceDetail.vue",
+        "src/view/bpm/start.vue",
+        "src/view/bpm/taskComplate.vue",
+        "src/view/bpm/todoTaskList.vue",
+        "src/view/login.vue",
+        "src/view/test.vue",
+        "static/app.js",
+        "static/app_bak.js",
+        "static/mui.js",
+        "test/e2e/custom-assertions/elementCount.js",
+        "test/e2e/nightwatch.conf.js",
+        "test/e2e/runner.js",
+        "test/e2e/specs/test.js",
+        "LICENSE",
+        "README.md",
+        "package-lock.json",
+        "package.json",
+        "sn.txt",
+        "说明.txt",
+        "index.html"
+    ]
+}
